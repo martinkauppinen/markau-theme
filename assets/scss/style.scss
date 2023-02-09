@@ -1,0 +1,277 @@
+@use "vars" as *;
+@use "nav";
+@use "mixins";
+@use "sass:color";
+@use "sass:math";
+
+@import url("https:///fonts.googleapis.com/css2?family=Crimson+Text&family=Source+Code+Pro&display=swap");
+body {
+    background-color: $main_background;
+    color: $main_foreground;
+    font-family: 'Crimson Text', serif;
+    font-size: 22px;
+}
+
+code {
+    font-family: 'Source Code Pro', sans-serif;
+    font-size: 18px;
+}
+
+.content {
+    margin-bottom: 2rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+    margin-top: 2 * $p_spacing;
+    font-size: smaller;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (orientation: portrait) {
+    .wrapper {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-wrapper {
+        width: 90vw;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .wrapper {
+        width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#TableOfContents {
+    @include mixins.box;
+    ul {
+        list-style: none;
+        margin-top: 1em;
+    }
+
+    a {
+        border: 0;
+        code {
+            font-family: 'Source Code Pro';
+            @include mixins.box(8%);
+            padding-inline: .5em;
+        }
+    }
+}
+
+#post-info {
+    font-size: small;
+    color: darken($main_foreground, 20%);
+    width: 100%;
+    text-align: right;
+    margin-top: 1em;
+}
+
+.post-series {
+    ol {
+        @include mixins.box;
+        padding: 1em;
+        list-style-position: inside;
+        a {
+            border: 0;
+        }
+    }
+}
+
+@mixin header($level) {
+    h#{$level} {
+        background-color: $main_background;
+        $spacing: math.div(2.0, $level);
+        padding-top: $spacing * .5em;
+        padding-bottom: $spacing * .5em;
+        text-shadow: 0 4px 8px darken($main_background, 5%);
+        code {
+            @include mixins.box;
+            padding-inline: .5em;
+        }
+    }
+}
+@for $i from 1 to 7 {
+    @include header($i);
+}
+
+a {
+    $color: darken($main_foreground, 30%);
+    color: $color;
+    text-decoration: none;
+    border-bottom: 2px dashed $color;
+
+    &:hover {
+        $color: lighten($color, 30%);
+        color: $color;
+        border-bottom: 2px dashed $color;
+    }
+}
+
+article {
+    max-width: 60ch;
+    min-width: 0;
+    margin: 0 auto;
+
+    figure {
+        @include mixins.box;
+        padding: 1em;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            margin: 0 auto;
+            max-width: 100%;
+            display: block;
+        }
+
+        figcaption {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: -1em;
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    p {
+        word-spacing: 0.16em;
+        line-height: 1.5em;
+        margin-bottom: $p_spacing;
+        code {
+            @include mixins.box;
+            padding-inline: .5rem;
+            white-space: nowrap;
+        }
+    }
+
+    pre {
+        @include mixins.box;
+        // Hack to override the embedded style attributes for the syntax highlighting
+        background-color: lighten($main_background, 2%) !important;
+        padding: .5em;
+        overflow-x: scroll;
+    }
+
+    blockquote {
+        @include mixins.box;
+        padding: 1em;
+        padding-bottom: 0;
+        font-style: italic;
+    }
+
+    .footnote-ref {
+        border-bottom: none !important;
+        padding-inline: .3em;
+        margin-left: .2em;
+        background-color: lighten($main_background, 10%);
+        font-size: smaller;
+        border-radius: 1em;
+    }
+
+    .footnotes {
+        margin-top: 2 * $p_spacing;
+        margin-bottom: 2 * $p_spacing;
+        font-size: smaller;
+
+        p {
+            display: inline;
+        }
+
+        li {
+            margin-left: 1em;
+            padding-left: 1em;
+            margin-bottom: $p_spacing;
+        }
+
+        hr {
+            $color: lighten($main_background, 20%);
+            color: #00000000;
+            border-top: 3px double $color;
+            margin-bottom: $p_spacing;
+        }
+    }
+
+    ul:not([class="page-list"]) {
+        //@include mixins.box;
+        padding-left: 1em;
+        list-style-position: inside;
+        list-style-type: "-   ";
+
+        li {
+            margin-bottom: .5 * $p_spacing;
+        }
+    }
+
+    ul[class="page-list"] {
+        list-style: none;
+        li {
+            a {
+                @include mixins.box;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: .25 * $p_spacing;
+                padding: .5em;
+                border-bottom: none;
+                &:hover {
+                    background-color: lighten($main_background, 10%);
+                }
+                .date {
+                    margin-left: $p_spacing;
+                    font-size: small;
+                }
+            }
+        }
+    }
+
+    table {
+        @include mixins.box;
+        font-family: 'Source Code Pro';
+        font-size: 18px;
+        width: 100%;
+        border-spacing: 0;
+
+        th {
+            padding: .5em;
+            background-color: lighten($main_background, 10%);
+            text-shadow: 0 4px 8px darken($main_background, 5%);
+        }
+
+        tr {
+            td {
+                padding: .5em;
+            }
+            &:nth-child(even) {
+                background-color: lighten($main_background, 5%);
+            }
+        }
+    }
+
+    .highlight-filename {
+        text-align: right;
+        display: block;
+    }
+}

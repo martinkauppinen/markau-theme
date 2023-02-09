@@ -1,0 +1,26 @@
+<header>
+    <nav class="navbar" role="navigation">
+        <div class="navbar-title">
+            <a href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a>
+        </div>
+        <div class="navbar-items">
+            <ul>
+                {{ $current := . }}
+                {{ range .Site.Menus.main }}
+                <li class="navbar-item">
+                    <a class="navbar-item-link" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </nav>
+    <div class="social-links">
+        <ul>
+            {{ range .Site.Params.socialLinks }}
+            <li class="social-item">
+                <a class="social-item-link" href="{{ .url }}" title="{{ .title }}"><i class="{{ .icon }}" aria-hidden="true"></i>{{ .text }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</header>

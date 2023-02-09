@@ -1,0 +1,5 @@
+@use "sass:color";
+
+$main_background: color.mix(#222, #00f, 98%);
+$main_foreground: #f2f2f2;
+$p_spacing: 1.5em;

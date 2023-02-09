@@ -1,0 +1,12 @@
+name = "Markau Theme"
+license = "MIT"
+licenselink = "https://github.com/martinkauppinen/markau-theme/blob/master/LICENSE"
+description = "A simple theme for my personal Hugo blog"
+homepage = "https://github.com/martinkauppinen/markau-theme/"
+tags = ["minimal", "dark mode"]
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Martin Kauppinen"
+  homepage = "https://markau.dev/"

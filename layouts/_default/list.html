@@ -1,0 +1,9 @@
+{{ define "main" }}
+    <h1 id="{{ .Title | urlize }}">{{ .Title | markdownify }}</h1>
+    {{ .Content }}
+    <ul class="page-list">
+        {{ range .Pages }}
+            <li><a href="{{ .Permalink }}"><span class="title">{{ .Title | markdownify }}</span><span class="date">{{ .Date.Format "2006-01-02" }}</span></a></li>
+        {{ end }}
+    </ul>
+{{ end }}

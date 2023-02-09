@@ -1,0 +1,51 @@
+@use "vars" ;
+@use "mixins";
+
+.navbar {
+    @include mixins.box(10%);
+    text-shadow: 0 4px 8px darken(vars.$main_background, 5%);
+
+    ul {
+        list-style: none;
+    }
+
+    max-width: 80ch;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom: 1px solid lighten(vars.$main_background, 15%);
+    border-left: 1px solid lighten(vars.$main_background, 15%);
+    border-right: 1px solid lighten(vars.$main_background, 15%);
+    top: 0;
+    padding: 1em;
+
+    .navbar-items {
+        display: block;
+        li {
+            float: left;
+            padding-inline: .5em;
+        }
+    }
+}
+
+.social-links {
+    max-width: 80ch;
+    margin: 0 auto;
+    font-size: smaller;
+    ul {
+        margin-top: .5em;
+        display: flex;
+        justify-content: flex-end;
+        .social-item {
+            display: block;
+            .social-item-link {
+                float: right;
+                padding-inline: .5em;
+                border: 0;
+            }
+        }
+    }
+}

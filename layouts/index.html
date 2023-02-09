@@ -1,0 +1,10 @@
+{{ define "main" }}
+<h1>Welcome to {{ .Site.Title }}</h1>
+{{ .Content }}
+<h2>Recent posts</h2>
+<ul class="page-list">
+    {{ range ( where site.RegularPages "Section" "posts" | first 5 )}}
+        <li><a href="{{ .Permalink }}"><span class="title">{{ .Title | markdownify }}</span><span class="date">{{ .Date.Format "2006-01-02" }}</span></a></li>
+    {{ end }}
+</ul>
+{{ end }}
