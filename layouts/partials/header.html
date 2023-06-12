@@ -18,7 +18,7 @@
         <ul>
             {{ range .Site.Params.socialLinks }}
             <li class="social-item">
-                <a class="social-item-link" href="{{ .url }}" title="{{ .title }}"><i class="{{ .icon }}" aria-hidden="true"></i>{{ .text }}</a>
+                <a rel="{{ .rel }}" class="social-item-link" href="{{ .url }}" title="{{ .title }}"><i class="{{ .icon }}" aria-hidden="true"></i>{{ .text }}</a>
             </li>
             {{ end }}
         </ul>
