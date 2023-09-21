@@ -64,9 +64,17 @@ footer {
 
 #TableOfContents {
     @include mixins.box;
+    >ul {
+        margin-top: 0.5 * $p_spacing;
+        margin-bottom: 0.5 * $p_spacing;
+    }
+
     ul {
         list-style: none;
-        margin-top: 1em;
+        padding-left: 1em;
+        li {
+            margin-top: 0.25 * $p_spacing;
+        }
     }
 
     a {
@@ -214,14 +222,33 @@ article {
         }
     }
 
-    ul:not([class="page-list"]) {
-        //@include mixins.box;
-        padding-left: 1em;
-        list-style-position: inside;
-        list-style-type: "-   ";
+    .content-body {
+        >ul:not([class="page-list"]) {
+            padding-left: 1em;
+            list-style-position: inside;
+            list-style-type: "-   ";
+            padding-bottom: .5 * $p_spacing;
 
-        li {
-            margin-bottom: .5 * $p_spacing;
+            li {
+                margin-bottom: .5 * $p_spacing;
+            }
+        }
+
+        ol {
+            padding-left: 1em;
+            list-style-position: outside;
+            padding-bottom: $p_spacing;
+            li {
+                padding-left: 0.5em;
+                &:not(:last-child) {
+                    margin-bottom: 0.5 * $p_spacing;
+                }
+            }
+            code {
+                @include mixins.box;
+                padding-inline: .5rem;
+                white-space: nowrap;
+            }
         }
     }
 

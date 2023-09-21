@@ -110,9 +110,16 @@ footer {
   box-shadow: 0px 0px 8px #151518;
   margin-bottom: 1.5em;
 }
+#TableOfContents > ul {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
 #TableOfContents ul {
   list-style: none;
-  margin-top: 1em;
+  padding-left: 1em;
+}
+#TableOfContents ul li {
+  margin-top: 0.375em;
 }
 #TableOfContents a {
   border: 0;
@@ -337,13 +344,34 @@ article .footnotes hr {
   border-top: 3px double #50505d;
   margin-bottom: 1.5em;
 }
-article ul:not([class=page-list]) {
+article .content-body > ul:not([class=page-list]) {
   padding-left: 1em;
   list-style-position: inside;
   list-style-type: "-   ";
+  padding-bottom: 0.75em;
 }
-article ul:not([class=page-list]) li {
+article .content-body > ul:not([class=page-list]) li {
   margin-bottom: 0.75em;
+}
+article .content-body ol {
+  padding-left: 1em;
+  list-style-position: outside;
+  padding-bottom: 1.5em;
+}
+article .content-body ol li {
+  padding-left: 0.5em;
+}
+article .content-body ol li:not(:last-child) {
+  margin-bottom: 0.75em;
+}
+article .content-body ol code {
+  background-color: #26262b;
+  border: 1px solid #393941;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px #151518;
+  margin-bottom: 1.5em;
+  padding-inline: 0.5rem;
+  white-space: nowrap;
 }
 article ul[class=page-list] {
   list-style: none;
