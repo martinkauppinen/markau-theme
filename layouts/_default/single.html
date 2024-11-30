@@ -7,9 +7,10 @@
         </div>
         <h1>{{ .Title | markdownify }}</h1>
         {{ if .Params.series }}
-            {{ with index (.GetTerms "series") 0 }}
-                <p><small><i>This post is part of a series: <a href="{{ .Permalink }}">{{ .LinkTitle }}</a></i></small></p>
-            {{ end }}
+            <p><small><i>This post is part of the following series:
+                {{ $seriesLinks := (apply (apply (.GetTerms "series") "partial" "series-link.html" ".") "chomp" ".") }}
+                {{ delimit $seriesLinks ", " | safeHTML }}.
+            </i></small></p>
         {{ end }}
     </header>
     <div class="content-body">
@@ -17,20 +18,21 @@
     </div>
     {{ if .Params.series }}
         <div class="post-series">
-            {{ $series := where .Site.RegularPages.ByDate ".Params.series" "intersect" .Params.series }}
-            {{ with $series }}
-            <h3 id="series">Posts in this series</h3>
-            <ol>
-                {{ range . }}
-                <li>
-                    {{ if eq .File.UniqueID $.File.UniqueID }}
-                    <b>{{ .Title }}</b>
-                    {{ else }}
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ $page := . }}
+            {{ range .GetTerms "series" }}
+                <h3>Other posts in {{ .LinkTitle }}</h3>
+                {{ $series := where $page.Site.RegularPages.ByDate ".Params.series" "intersect" (slice .LinkTitle) }}
+                <ol>
+                    {{ range $series }}
+                    <li>
+                        {{ if eq .File.UniqueID $.File.UniqueID }}
+                        <b>{{ .Title }}</b>
+                        {{ else }}
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        {{ end }}
+                    </li>
                     {{ end }}
-                </li>
-                {{ end }}
-            </ol>
+                </ol>
             {{ end }}
         </div>
     {{ end }}
