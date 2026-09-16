@@ -1,9 +1,10 @@
+@use "sass:color";
 @use "vars" ;
 @use "mixins";
 
 .navbar {
     @include mixins.box(10%);
-    text-shadow: 0 4px 8px darken(vars.$main_background, 5%);
+    text-shadow: 0 4px 8px color.adjust(vars.$main_background, $lightness: -5%);
 
     ul {
         list-style: none;
@@ -16,9 +17,9 @@
     justify-content: space-between;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-bottom: 1px solid lighten(vars.$main_background, 15%);
-    border-left: 1px solid lighten(vars.$main_background, 15%);
-    border-right: 1px solid lighten(vars.$main_background, 15%);
+    border-bottom: 1px solid color.adjust(vars.$main_background, $lightness: 15%);
+    border-left: 1px solid color.adjust(vars.$main_background, $lightness: 15%);
+    border-right: 1px solid color.adjust(vars.$main_background, $lightness: 15%);
     top: 0;
     padding: 1em;
 

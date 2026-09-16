@@ -89,7 +89,7 @@ footer {
 
 #post-info {
     font-size: small;
-    color: darken($main_foreground, 20%);
+    color: color.adjust($main_foreground, $lightness: -20%);
     width: 100%;
     text-align: right;
     margin-top: 1em;
@@ -112,7 +112,7 @@ footer {
         $spacing: math.div(2.0, $level);
         padding-top: $spacing * .5em;
         padding-bottom: $spacing * .5em;
-        text-shadow: 0 4px 8px darken($main_background, 5%);
+        text-shadow: 0 4px 8px color.adjust($main_background, $lightness: -5%);
         code {
             @include mixins.box;
             padding-inline: .5em;
@@ -124,13 +124,13 @@ footer {
 }
 
 a {
-    $color: darken($main_foreground, 30%);
+    $color: color.adjust($main_foreground, $lightness: -30%);
     color: $color;
     text-decoration: none;
     border-bottom: 2px dashed $color;
 
     &:hover {
-        $color: lighten($color, 30%);
+        $color: color.adjust($color, $lightness: 30%);
         color: $color;
         border-bottom: 2px dashed $color;
     }
@@ -178,7 +178,7 @@ article {
     pre {
         @include mixins.box;
         // Hack to override the embedded style attributes for the syntax highlighting
-        background-color: lighten($main_background, 2%) !important;
+        background-color: color.adjust($main_background, $lightness: 2%) !important;
         padding: .5em;
         overflow-x: scroll;
     }
@@ -194,7 +194,7 @@ article {
         border-bottom: none !important;
         padding-inline: .3em;
         margin-left: .2em;
-        background-color: lighten($main_background, 10%);
+        background-color: color.adjust($main_background, $lightness: 10%);
         font-size: smaller;
         border-radius: 1em;
     }
@@ -215,7 +215,7 @@ article {
         }
 
         hr {
-            $color: lighten($main_background, 20%);
+            $color: color.adjust($main_background, $lightness: 20%);
             color: #00000000;
             border-top: 3px double $color;
             margin-bottom: $p_spacing;
@@ -264,7 +264,7 @@ article {
                 padding: .5em;
                 border-bottom: none;
                 &:hover {
-                    background-color: lighten($main_background, 10%);
+                    background-color: color.adjust($main_background, $lightness: 10%);
                 }
                 .date {
                     margin-left: $p_spacing;
@@ -283,8 +283,8 @@ article {
 
         th {
             padding: .5em;
-            background-color: lighten($main_background, 10%);
-            text-shadow: 0 4px 8px darken($main_background, 5%);
+            background-color: color.adjust($main_background, $lightness: 10%);
+            text-shadow: 0 4px 8px color.adjust($main_background, $lightness: -5%);
         }
 
         tr {
@@ -292,7 +292,7 @@ article {
                 padding: .5em;
             }
             &:nth-child(even) {
-                background-color: lighten($main_background, 5%);
+                background-color: color.adjust($main_background, $lightness: 5%);
             }
         }
     }
@@ -300,5 +300,21 @@ article {
     .highlight-filename {
         text-align: right;
         display: block;
+    }
+
+    details {
+        @include mixins.box(-2%);
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: .5em;
+        border: 1px solid color.adjust($main_background, $lightness: 5%);
+
+        summary {
+            cursor: pointer;
+            color: color.adjust($main_foreground, $lightness: -30%);
+            margin-bottom: .5em;
+            transition: background .2s;
+            font-style: italic;
+        }
     }
 }
