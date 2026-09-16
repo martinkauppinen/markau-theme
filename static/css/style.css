@@ -1,11 +1,16 @@
 @import url("https:///fonts.googleapis.com/css2?family=Crimson+Text&family=Source+Code+Pro&display=swap");
 .navbar {
-  background-color: #393941;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
-  text-shadow: 0 4px 8px #151518;
+  text-shadow: 0 4px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
+}
+.navbar ul {
+  list-style: none;
+}
+.navbar {
   max-width: 80ch;
   margin: 0 auto;
   display: flex;
@@ -13,14 +18,11 @@
   justify-content: space-between;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom: 1px solid #45454f;
-  border-left: 1px solid #45454f;
-  border-right: 1px solid #45454f;
+  border-bottom: 1px solid rgb(27.0003159558%, 27.0003159558%, 31.1330173776%);
+  border-left: 1px solid rgb(27.0003159558%, 27.0003159558%, 31.1330173776%);
+  border-right: 1px solid rgb(27.0003159558%, 27.0003159558%, 31.1330173776%);
   top: 0;
   padding: 1em;
-}
-.navbar ul {
-  list-style: none;
 }
 .navbar .navbar-items {
   display: block;
@@ -50,7 +52,7 @@
 }
 
 body {
-  background-color: #212126;
+  background-color: rgb(13.0666666667%, 13.0666666667%, 15.0666666667%);
   color: #f2f2f2;
   font-family: "Crimson Text", serif;
   font-size: 22px;
@@ -104,10 +106,10 @@ footer {
   }
 }
 #TableOfContents {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
 }
 #TableOfContents > ul {
@@ -126,10 +128,10 @@ footer {
 }
 #TableOfContents a code {
   font-family: "Source Code Pro";
-  background-color: #34343c;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(20.4979462875%, 20.4979462875%, 23.6353870458%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   padding-inline: 0.5em;
 }
@@ -143,10 +145,10 @@ footer {
 }
 
 .post-series ol {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   padding: 1em;
   list-style-position: inside;
@@ -156,99 +158,99 @@ footer {
 }
 
 h1 {
-  background-color: #212126;
+  background-color: rgb(13.0666666667%, 13.0666666667%, 15.0666666667%);
   padding-top: 1em;
   padding-bottom: 1em;
-  text-shadow: 0 4px 8px #151518;
+  text-shadow: 0 4px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
 }
 h1 code {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   padding-inline: 0.5em;
 }
 
 h2 {
-  background-color: #212126;
+  background-color: rgb(13.0666666667%, 13.0666666667%, 15.0666666667%);
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  text-shadow: 0 4px 8px #151518;
+  text-shadow: 0 4px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
 }
 h2 code {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   padding-inline: 0.5em;
 }
 
 h3 {
-  background-color: #212126;
+  background-color: rgb(13.0666666667%, 13.0666666667%, 15.0666666667%);
   padding-top: 0.3333333333em;
   padding-bottom: 0.3333333333em;
-  text-shadow: 0 4px 8px #151518;
+  text-shadow: 0 4px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
 }
 h3 code {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   padding-inline: 0.5em;
 }
 
 h4 {
-  background-color: #212126;
+  background-color: rgb(13.0666666667%, 13.0666666667%, 15.0666666667%);
   padding-top: 0.25em;
   padding-bottom: 0.25em;
-  text-shadow: 0 4px 8px #151518;
+  text-shadow: 0 4px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
 }
 h4 code {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   padding-inline: 0.5em;
 }
 
 h5 {
-  background-color: #212126;
+  background-color: rgb(13.0666666667%, 13.0666666667%, 15.0666666667%);
   padding-top: 0.2em;
   padding-bottom: 0.2em;
-  text-shadow: 0 4px 8px #151518;
+  text-shadow: 0 4px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
 }
 h5 code {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   padding-inline: 0.5em;
 }
 
 h6 {
-  background-color: #212126;
+  background-color: rgb(13.0666666667%, 13.0666666667%, 15.0666666667%);
   padding-top: 0.1666666667em;
   padding-bottom: 0.1666666667em;
-  text-shadow: 0 4px 8px #151518;
+  text-shadow: 0 4px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
 }
 h6 code {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   padding-inline: 0.5em;
 }
 
 a {
-  color: #a6a6a6;
+  color: rgb(64.9019607843%, 64.9019607843%, 64.9019607843%);
   text-decoration: none;
-  border-bottom: 2px dashed #a6a6a6;
+  border-bottom: 2px dashed rgb(64.9019607843%, 64.9019607843%, 64.9019607843%);
 }
 a:hover {
   color: #f2f2f2;
@@ -261,10 +263,10 @@ article {
   margin: 0 auto;
 }
 article figure {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   padding: 1em;
   max-width: 100%;
@@ -290,29 +292,29 @@ article p {
   margin-bottom: 1.5em;
 }
 article p code {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   padding-inline: 0.5rem;
   white-space: nowrap;
 }
 article pre {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
-  background-color: #26262b !important;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%) !important;
   padding: 0.5em;
   overflow-x: scroll;
 }
 article blockquote {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   padding: 1em;
   padding-bottom: 0;
@@ -322,7 +324,7 @@ article .footnote-ref {
   border-bottom: none !important;
   padding-inline: 0.3em;
   margin-left: 0.2em;
-  background-color: #393941;
+  background-color: rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
   font-size: smaller;
   border-radius: 1em;
 }
@@ -341,7 +343,7 @@ article .footnotes li {
 }
 article .footnotes hr {
   color: rgba(0, 0, 0, 0);
-  border-top: 3px double #50505d;
+  border-top: 3px double rgb(31.6448657188%, 31.6448657188%, 36.4884676145%);
   margin-bottom: 1.5em;
 }
 article .content-body > ul:not([class=page-list]) {
@@ -365,10 +367,10 @@ article .content-body ol li:not(:last-child) {
   margin-bottom: 0.75em;
 }
 article .content-body ol code {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   padding-inline: 0.5rem;
   white-space: nowrap;
@@ -377,10 +379,10 @@ article ul[class=page-list] {
   list-style: none;
 }
 article ul[class=page-list] li a {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   display: flex;
   justify-content: space-between;
@@ -390,17 +392,17 @@ article ul[class=page-list] li a {
   border-bottom: none;
 }
 article ul[class=page-list] li a:hover {
-  background-color: #393941;
+  background-color: rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
 }
 article ul[class=page-list] li a .date {
   margin-left: 1.5em;
   font-size: small;
 }
 article table {
-  background-color: #26262b;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
   font-family: "Source Code Pro";
   font-size: 18px;
@@ -409,18 +411,36 @@ article table {
 }
 article table th {
   padding: 0.5em;
-  background-color: #393941;
-  text-shadow: 0 4px 8px #151518;
+  background-color: rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  text-shadow: 0 4px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
 }
 article table tr td {
   padding: 0.5em;
 }
 article table tr:nth-child(even) {
-  background-color: #2d2d34;
+  background-color: rgb(17.7112164297%, 17.7112164297%, 20.4221169036%);
 }
 article .highlight-filename {
   text-align: right;
   display: block;
+}
+article details {
+  background-color: rgb(11.2088467615%, 11.2088467615%, 12.9244865719%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  border: 1px solid rgb(17.7112164297%, 17.7112164297%, 20.4221169036%);
+}
+article details summary {
+  cursor: pointer;
+  color: rgb(64.9019607843%, 64.9019607843%, 64.9019607843%);
+  margin-bottom: 0.5em;
+  transition: background 0.2s;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=style.css.map */

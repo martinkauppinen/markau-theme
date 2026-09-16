@@ -1,10 +1,15 @@
 .navbar {
-  background-color: #393941;
-  border: 1px solid #393941;
-  border-radius: 5px;
-  box-shadow: 0px 0px 8px #151518;
+  background-color: rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border: 1px solid rgb(22.3557661927%, 22.3557661927%, 25.7775671406%);
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
   margin-bottom: 1.5em;
-  text-shadow: 0 4px 8px #151518;
+  text-shadow: 0 4px 8px rgb(8.4221169036%, 8.4221169036%, 9.7112164297%);
+}
+.navbar ul {
+  list-style: none;
+}
+.navbar {
   max-width: 80ch;
   margin: 0 auto;
   display: flex;
@@ -12,14 +17,11 @@
   justify-content: space-between;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom: 1px solid #45454f;
-  border-left: 1px solid #45454f;
-  border-right: 1px solid #45454f;
+  border-bottom: 1px solid rgb(27.0003159558%, 27.0003159558%, 31.1330173776%);
+  border-left: 1px solid rgb(27.0003159558%, 27.0003159558%, 31.1330173776%);
+  border-right: 1px solid rgb(27.0003159558%, 27.0003159558%, 31.1330173776%);
   top: 0;
   padding: 1em;
-}
-.navbar ul {
-  list-style: none;
 }
 .navbar .navbar-items {
   display: block;
