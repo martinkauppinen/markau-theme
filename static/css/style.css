@@ -308,7 +308,7 @@ article pre {
   margin-bottom: 1.5em;
   background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%) !important;
   padding: 0.5em;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 article blockquote {
   background-color: rgb(14.9244865719%, 14.9244865719%, 17.2088467615%);
@@ -330,7 +330,7 @@ article .footnote-ref {
 }
 article .footnotes {
   margin-top: 3em;
-  margin-bottom: 3em;
+  margin-bottom: 100vh;
   font-size: smaller;
 }
 article .footnotes p {
