@@ -180,7 +180,7 @@ article {
         // Hack to override the embedded style attributes for the syntax highlighting
         background-color: color.adjust($main_background, $lightness: 2%) !important;
         padding: .5em;
-        overflow-x: scroll;
+        overflow-x: auto;
     }
 
     blockquote {
@@ -201,7 +201,7 @@ article {
 
     .footnotes {
         margin-top: 2 * $p_spacing;
-        margin-bottom: 2 * $p_spacing;
+        margin-bottom: 100vh;
         font-size: smaller;
 
         p {

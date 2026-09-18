@@ -13,8 +13,13 @@
             </i></small></p>
         {{ end }}
     </header>
+
+    {{ $contentFootnotesPattern := `(<div class="footnotes" role="doc-endnotes">(?:.|\n)+?.*?</div>)` }}
+    {{ $contentFootnotesContent := index (findRE $contentFootnotesPattern .Content) 0 }}
+    {{ .Scratch.Set "contentFootnotes" ($contentFootnotesContent | safeHTML) }}
+
     <div class="content-body">
-        {{ .Content }}
+        {{ .Content | replaceRE $contentFootnotesPattern "" | safeHTML }}
     </div>
     {{ if .Params.series }}
         <div class="post-series">
@@ -36,4 +41,7 @@
             {{ end }}
         </div>
     {{ end }}
+    {{ if .Scratch.Get "contentFootnotes" }}
+        {{ .Scratch.Get "contentFootnotes" }}
+    {{end}}
 {{ end }}
